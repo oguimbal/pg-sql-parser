@@ -835,6 +835,18 @@ line`,
             operand: { type: 'ref', name: 'a' }
         });
 
+        checkTreeExpr('a isnull', {
+            type: 'unary',
+            op: 'IS NULL',
+            operand: { type: 'ref', name: 'a' }
+        });
+
+        checkTreeExpr('a notnull', {
+            type: 'unary',
+            op: 'IS NOT NULL',
+            operand: { type: 'ref', name: 'a' }
+        });
+
         checkTreeExpr('a is unknown', {
             type: 'unary',
             op: 'IS UNKNOWN',
