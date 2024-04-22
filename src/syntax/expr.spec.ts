@@ -835,6 +835,18 @@ line`,
             operand: { type: 'ref', name: 'a' }
         });
 
+        checkTreeExpr('a is unknown', {
+            type: 'unary',
+            op: 'IS UNKNOWN',
+            operand: { type: 'ref', name: 'a' }
+        });
+
+        checkTreeExpr('a is not unknown', {
+            type: 'unary',
+            op: 'IS NOT UNKNOWN',
+            operand: { type: 'ref', name: 'a' }
+        });
+
     });
 
 
