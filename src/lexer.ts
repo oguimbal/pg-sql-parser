@@ -78,6 +78,9 @@ export const lexer = compile({
     op_like: /~~/, // ~~ =LIKE
     op_mod: '%',
     op_exp: '^',
+    op_others_unary: {
+        match: ['|/', '||/', '@', '~', '@-@', '@@', '#', '?-', '?|', '!!'],
+    },
     op_additive: {
         // group other additive operators
         match: ['||', '-', '#-', '&&'],

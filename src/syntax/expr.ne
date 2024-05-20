@@ -95,7 +95,7 @@ expr_in -> expr_binary[op_single[ops_in], expr_in, expr_add]
 expr_add -> expr_binary[op_scopable[(%op_plus | %op_minus | %op_additive)], expr_add, expr_mult]
 expr_mult -> expr_binary[op_scopable[(%star | %op_div | %op_mod)],  expr_mult, expr_exp]
 expr_exp -> expr_binary[op_scopable[%op_exp], expr_exp, expr_unary_add]
-expr_unary_add -> expr_left_unary[op_scopable[(%op_plus | %op_minus)], expr_unary_add, expr_various_constructs]
+expr_unary_add -> expr_left_unary[op_scopable[(%op_plus | %op_minus | %op_others_unary)], expr_unary_add, expr_various_constructs]
 expr_various_constructs -> expr_binary[op_single[various_binaries], expr_various_constructs, expr_array_index]
 
 expr_array_index
