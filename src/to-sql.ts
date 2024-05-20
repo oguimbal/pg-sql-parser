@@ -1484,6 +1484,16 @@ const visitor = astVisitor<IAstFullVisitor>(m => ({
         switch (t.op) {
             case '+':
             case '-':
+            case '|/':
+            case '||/':
+            case '@':
+            case '~':
+            case '@-@':
+            case '@@':
+            case '#':
+            case '?-':
+            case '?|':
+            case '!!':
                 // prefix ops
                 visitOp(t);
                 m.expr(t.operand);
