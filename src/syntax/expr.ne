@@ -253,8 +253,8 @@ expr_primary
 
 
 # LIKE-kind operators
-ops_like ->  ops_like_keywors | ops_like_operators
-ops_like_keywors -> %kw_not:? (%kw_like | %kw_ilike)
+ops_like ->  ops_like_keywords | ops_like_operators
+ops_like_keywords -> %kw_not:? (%kw_like | %kw_ilike)
 ops_like_operators
     -> (%op_like {% () => 'LIKE' %})
     | (%op_ilike {% () => 'ILIKE' %})
